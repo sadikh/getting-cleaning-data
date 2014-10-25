@@ -35,7 +35,7 @@ features <- read.table(getFilePath("features.txt"))
 mean_and_std_features <- grep("-mean\\(\\)|-std\\(\\)", features[, 2])
 X <- X[, mean_and_std_features]
 names(X) <- features[mean_and_std_features, 2]
-)
+
 # 3. Descriptive activity names
 activities <- read.table(getFilePath("activity_labels.txt"))
 Y[, 1] <- activities[Y[, 1], 2]
